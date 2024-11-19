@@ -3,71 +3,88 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Support</title>
+  <title>Contact Support - Aviora</title>
   <style>
-    /* General Reset */
+    :root {
+      --accent-color: #007AFF; /* iPhone systemBlue */
+      --light-bg: #ffffff;
+      --light-text: #000000;
+      --dark-bg: #1c1c1e;
+      --dark-text: #ffffff;
+    }
+
     body {
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      color: #333;
-      background-color: #f8f9fa; /* Soft background */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background-color: var(--light-bg);
+      color: var(--light-text);
+      transition: all 0.3s ease;
     }
 
-    /* Container Styling */
-    .container {
-      max-width: 600px;
-      margin: 50px auto;
-      padding: 20px;
-      background: #ffffff;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
-      border-radius: 10px;
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: var(--dark-bg);
+        color: var(--dark-text);
+      }
+
+      a {
+        color: var(--accent-color);
+      }
     }
 
-    /* Heading Styling */
-    h1 {
+    header {
       text-align: center;
-      color: #2c3e50; /* Dark blue-gray */
       margin-bottom: 20px;
+    }
+
+    .logo {
+      width: 100px;
+      height: auto;
+      margin-bottom: 15px;
+    }
+
+    h1 {
       font-size: 2.5rem;
+      margin: 0;
+      color: var(--accent-color);
     }
 
-    /* Paragraph Styling */
     p {
-      margin: 10px 0;
       font-size: 1.1rem;
+      text-align: center;
     }
 
-    /* Email Link Styling */
+    .app-name {
+      font-weight: bold;
+      color: var(--accent-color);
+    }
+
     a {
-      color: #007bff; /* Bright blue */
+      color: var(--accent-color);
       text-decoration: none;
       font-weight: bold;
     }
 
     a:hover {
-      color: #0056b3; /* Darker blue */
       text-decoration: underline;
-    }
-
-    /* Footer Styling */
-    footer {
-      text-align: center;
-      margin-top: 30px;
-      font-size: 0.9rem;
-      color: #777;
     }
   </style>
 </head>
 <body>
-  <div class="container">
+  <header>
+    <img src="logo.png" alt="App Logo" class="logo"> <!-- Replace "logo.png" with your actual logo filename -->
     <h1>Contact Us</h1>
+  </header>
+  <main>
+    <p>Welcome to <span class="app-name">Aviora</span> Support!</p>
     <p>If you need help or have any questions, you can reach out to us at:</p>
     <p>Email: <a href="mailto:backedFlyy@gmail.com">backedFlyy@gmail.com</a></p>
-  </div>
-  <footer>
-    &copy; 2024 Backed Flyy. All rights reserved.
-  </footer>
+  </main>
 </body>
 </html>
